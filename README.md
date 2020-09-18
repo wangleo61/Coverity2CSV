@@ -15,4 +15,9 @@ Python 2.7 install
 
 #CWE & OWASP Top 10
 We will going you mentioned map the base value of a CWE (merged defect attribute) to a separate private Python dictionary of terms for whichever OWASP standard you are interested in.
+The relationship between CWE and OWASP Top 10
+https://cwe.mitre.org/data/definitions/1026.html
+
+OWASP Top Introduction
+https://owasp.org/www-pdf-archive/OWASP_Top_10-2017_%28en%29.pdf.pdf
 
