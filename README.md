@@ -13,3 +13,6 @@ Export the Coverity defect as CVS file
 #
 Python 2.7 install
 
+#CWE & OWASP Top 10
+We will going you mentioned map the base value of a CWE (merged defect attribute) to a separate private Python dictionary of terms for whichever OWASP standard you are interested in.
+
