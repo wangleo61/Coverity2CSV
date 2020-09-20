@@ -1,65 +1,265 @@
-CID,Checker,Category,Type,Impact,Severity,CVSS score,Vulnerable line number,Defect remediation guidance,CWE
-51361,ASSIGN_NOT_RETURNING_STAR_THIS,Strict rule violations,Assign does not return *this,Low,Unspecified,0.0,95, ,710
-51491,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,58, ,
-51493,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,92, ,
-51497,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,72, ,
-51498,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,106, ,
-51504,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,458, ,
-51505,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,64, ,
-53735,SELF_ASSIGN,Rule violations,Unsafe assignment operator,Low,Unspecified,0.0,170, ,710
-104843,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,1192, ,457
-104844,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,98, ,457
-104845,UNCAUGHT_EXCEPT,Error handling issues,Uncaught exception,Medium,Unspecified,5.0,246, ,248
-104846,TOCTOU,Security best practices violations,Time of check time of use,Low,Unspecified,5.0,140, ,367
-104847,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,1185, ,457
-104849,FORWARD_NULL,Null pointer dereferences,Dereference after null check,Medium,Unspecified,7.39,456, ,476
-104850,CONSTANT_EXPRESSION_RESULT,Integer handling issues,Operands don't affect result,Medium,Unspecified,7.39,525, ,569
-104851,UNINIT_CTOR,Uninitialized members,Uninitialized pointer field,Medium,Unspecified,6.3,2242, ,457
-104852,DC.WEAK_CRYPTO,Security best practices violations,Calling risky function,Low,Unspecified,6.3,426,"Use a compliant random number generator, such as ""/dev/random"" or ""/dev/urandom"" on Unix-like systems, and CNG (Cryptography API: Next Generation) on Windows.",676
-104854,UNINIT_CTOR,Uninitialized members,Uninitialized pointer field,Medium,Unspecified,6.3,2002, ,457
-104855,TOCTOU,Security best practices violations,Time of check time of use,Low,Unspecified,4.91,392, ,367
-104856,DC.WEAK_CRYPTO,Security best practices violations,Calling risky function,Low,Unspecified,4.91,78,"Use a compliant random number generator, such as ""/dev/random"" or ""/dev/urandom"" on Unix-like systems, and CNG (Cryptography API: Next Generation) on Windows.",676
-104858,UNINIT_CTOR,Uninitialized members,Uninitialized scalar field,Medium,Unspecified,6.3,505, ,457
-104859,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,120, ,457
-104861,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,136, ,457
-104862,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,748, ,457
-104863,DC.WEAK_CRYPTO,Security best practices violations,Calling risky function,Low,Unspecified,6.3,23,"Use a compliant random number generator, such as ""/dev/random"" or ""/dev/urandom"" on Unix-like systems, and CNG (Cryptography API: Next Generation) on Windows.",676
-104865,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,1178, ,457
-104867,MISSING_LOCK,Concurrent data access violations,Data race condition,Medium,Unspecified,4.91,542, ,366
-104868,UNINIT_CTOR,Uninitialized members,Uninitialized scalar field,Medium,Unspecified,6.3,560, ,457
-104869,UNINIT_CTOR,Uninitialized members,Uninitialized pointer field,Medium,Unspecified,6.3,2242, ,457
-104870,NO_EFFECT,Control flow issues,Unsigned compared against 0,Medium,Unspecified,0.0,398, ,570
-104871,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,110, ,457
-104872,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,128, ,457
-104873,DC.WEAK_CRYPTO,Security best practices violations,Calling risky function,Low,Unspecified,6.3,172,"Use a compliant random number generator, such as ""/dev/random"" or ""/dev/urandom"" on Unix-like systems, and CNG (Cryptography API: Next Generation) on Windows.",676
-110590,PW.PARAMETER_HIDDEN,Parse warnings,Parse warning,Low,Unspecified,0.0,470, ,398
-110591,PW.PARAMETER_HIDDEN,Parse warnings,Parse warning,Low,Unspecified,0.0,58, ,398
-155489,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,46, ,
-156899,MISSING_ASSIGN,Rule violations,Missing assignment operator,Low,Unspecified,0.0,46, ,710
-158984,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,98, ,
-158985,MISSING_ASSIGN,Rule violations,Missing assignment operator,Low,Unspecified,0.0,527, ,710
-158986,SELF_ASSIGN,Rule violations,Unsafe assignment operator,Low,Unspecified,0.0,679, ,710
-158987,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,767, ,
-158988,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,1055, ,
-158989,MISSING_ASSIGN,Rule violations,Missing assignment operator,Low,Unspecified,0.0,60, ,710
-158990,MISSING_COPY,Rule violations,Missing copy constructor,Low,Unspecified,0.0,35, ,710
-158991,MISSING_COPY,Rule violations,Missing copy constructor,Low,Unspecified,0.0,527, ,710
-158992,MISSING_COPY,Rule violations,Missing copy constructor,Low,Unspecified,0.0,60, ,710
-158993,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,49, ,
-158994,ASSIGN_NOT_RETURNING_STAR_THIS,Strict rule violations,Assign does not return *this,Low,Unspecified,0.0,551, ,710
-158995,MISSING_ASSIGN,Rule violations,Missing assignment operator,Low,Unspecified,0.0,35, ,710
-159257,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,83, ,457
-159258,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,185, ,457
-159259,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,139, ,457
-159260,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,55, ,457
-159261,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,213, ,457
-159262,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,111, ,457
-159482,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,24, ,404
-159483,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,33, ,404
-159484,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,139, ,404
-159485,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Major,6.3,33, ,404
-159486,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,276, ,404
-159487,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,139, ,404
-159488,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,287, ,404
-159489,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,26, ,404
-159693,UNCAUGHT_EXCEPT,Error handling issues,Uncaught exception,Medium,Unspecified,6.3,557, ,248
+CID,Checker,Category,Type,Impact,Severity,CVSS score,Vulnerable line number,Defect remediation guidance,CWE,OWASP
+10188,PATH_MANIPULATION,High impact security,"Filesystem path, filename, or URI manipulation",High,Unspecified,CVSS_Score_value,29,"Path manipulation vulnerabilities can be addressed by proper input validation. Blacklisting characters that allow unsafe path traversal can improve the safety of the input, but the recommended approach is to whitelist the set of expected characters. This should exclude absolute paths and upward directory traversal.",22,A2
+10189,SQL_NOT_CONSTANT,Audit impact security,Non-constant SQL,Audit,Unspecified,CVSS_Score_value,41,"Perform one of the following to guard against SQL string injection attacks with JDBC.
+* Refactor the JDBC code to use the ""PreparedStatement"" API instead of ""Statement"".
+* Add a positional parameter to the SQL statement using ""?"".
+* Bind the tainted value to the parameter using the ""setString"" method: ""PreparedStatement.setString(1, """"round"""")"".
+",89,A1
+10190,WEAK_GUARD,Low impact security,Comparison of principal name to a constant,Low,Unspecified,CVSS_Score_value,58,"Use a stronger mechanism to make authorization decisions, such as one based on users having roles or permissions that are checked before performing sensitive operations.",290,
+10191,XSS,High impact security,Cross-site scripting,High,Unspecified,CVSS_Score_value,147, ,79,
+10192,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,CVSS_Score_value,128, ,404,
+10193,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Major,CVSS_Score_value,122, ,404,
+10194,SQLI,High impact security,SQL injection,High,Unspecified,CVSS_Score_value,40,"Perform one of the following to guard against SQL string injection attacks with JDBC.
+* Refactor the JDBC code to use the ""PreparedStatement"" API instead of ""Statement"".
+* Add a positional parameter to the SQL statement using ""?"".
+* Bind the tainted value to the parameter using the ""setString"" method: ""PreparedStatement.setString(1, """"username"""")"".
+",89,A1
+10195,CSRF,High impact security,Cross-site request forgery,High,Unspecified,CVSS_Score_value,123, ,352,
+10196,PATH_MANIPULATION,High impact security,"Filesystem path, filename, or URI manipulation",High,Major,CVSS_Score_value,18,"Path manipulation vulnerabilities can be addressed by proper input validation. Blacklisting characters that allow unsafe path traversal can improve the safety of the input, but the recommended approach is to whitelist the set of expected characters. This should exclude absolute paths and upward directory traversal.",22,A2
+10197,SQLI,High impact security,SQL injection,High,Unspecified,CVSS_Score_value,20,"Perform one of the following to guard against SQL string injection attacks with JDBC.
+* Refactor the JDBC code to use the ""PreparedStatement"" API instead of ""Statement"".
+* Add a positional parameter to the SQL statement using ""?"".
+* Bind the tainted value to the parameter using the ""setString"" method: ""PreparedStatement.setString(1, """"number"""")"".
+",89,A1
+10198,CSRF,Medium impact security,Cross-site request forgery,Medium,Unspecified,CVSS_Score_value,151, ,352,
+10199,SQLI,Audit impact security,SQL injection,Audit,Unspecified,CVSS_Score_value,22,"Perform one of the following to guard against SQL string injection attacks with JDBC.
+* Refactor the JDBC code to use the ""PreparedStatement"" API instead of ""Statement"".
+* Add a positional parameter to the SQL statement using ""?"".
+* Bind the tainted value to the parameter using the ""setString"" method: ""PreparedStatement.setString(1, """"username"""")"".
+",89,A1
+10200,SQLI,Audit impact security,SQL injection,Audit,Unspecified,CVSS_Score_value,21,"Perform one of the following to guard against SQL string injection attacks with JDBC.
+* Refactor the JDBC code to use the ""PreparedStatement"" API instead of ""Statement"".
+* Add a positional parameter to the SQL statement using ""?"".
+* Bind the tainted value to the parameter using the ""setString"" method: ""PreparedStatement.setString(1, """"username"""")"".
+",89,A1
+10201,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,CVSS_Score_value,84, ,404,
+10202,SQL_NOT_CONSTANT,Audit impact security,Non-constant SQL,Audit,Unspecified,CVSS_Score_value,41,"Perform one of the following to guard against SQL injection attack with JDBC.
+* Refactor the JDBC code to use the ""PreparedStatement"" API instead of ""Statement"". Parameterize the SQL statement using ""?"" positional characters. Bind the tainted values to the ""?"" positional parameters using one of the ""PreparedStatement.set*"" methods.
+* Validate user-supplied values against predefined constant values. Concatenate these constant values into the SQL statement.
+* Cast tainted values to safe types such as integers. Concatenate these type safe values into the statement.
+",89,A1
+10203,PATH_MANIPULATION,High impact security,"Filesystem path, filename, or URI manipulation",High,Unspecified,CVSS_Score_value,24,"Path manipulation vulnerabilities can be addressed by proper input validation. Blacklisting characters that allow unsafe path traversal can improve the safety of the input, but the recommended approach is to whitelist the set of expected characters. This should exclude absolute paths and upward directory traversal.",22,A2
+10204,UNSAFE_DESERIALIZATION,High impact security,Unsafe deserialization,High,Unspecified,CVSS_Score_value,143,"If possible, use pure data formats such as JSON or XML to serialize and deserialize untrusted data.  Otherwise, if you must use native serialization methods, check the integrity of the data (for example with HMAC) before deserializing it.",502,
+10205,SENSITIVE_DATA_LEAK,Medium impact security,Cleartext sensitive data in a database,Medium,Unspecified,CVSS_Score_value,35,"Do one of the following before storing it:
+- Encrypt the data.
+- Use a cryptographic hash on the data.",313,
+10206,SQLI,Audit impact security,SQL injection,Audit,Unspecified,CVSS_Score_value,21,"Perform one of the following to guard against SQL injection attack with JDBC.
+* Refactor the JDBC code to use the ""PreparedStatement"" API instead of ""Statement"". Parameterize the SQL statement using ""?"" positional characters. Bind the tainted values to the ""?"" positional parameters using one of the ""PreparedStatement.set*"" methods.
+* Validate user-supplied values against predefined constant values. Concatenate these constant values into the SQL statement.
+* Cast tainted values to safe types such as integers. Concatenate these type safe values into the statement.
+",89,A1
+10207,SENSITIVE_DATA_LEAK,Medium impact security,Cleartext sensitive data in a database,Medium,Unspecified,CVSS_Score_value,35,"Do one of the following before storing it:
+- Encrypt the data.
+- Use a cryptographic hash on the data.",313,
+10208,CSRF,Medium impact security,Cross-site request forgery,Medium,Unspecified,CVSS_Score_value,112, ,352,
+10209,XSS,High impact security,Cross-site scripting,High,Unspecified,CVSS_Score_value,187,"Perform the following escaping in the following order to guard against cross-site scripting attacks with Java.
+
+For example: ""Escape.html(buf)""
+
+
+* Use the ""Escape.html"" function from the Coverity Sanitizers Library. This escapes the output for HTML.
+
+",79,
+10210,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,CVSS_Score_value,163, ,404,
+10211,NULL_RETURNS,Null pointer dereferences,Dereference null return value,Medium,Unspecified,CVSS_Score_value,14, ,476,
+10212,CSRF,High impact security,Cross-site request forgery,High,Minor,CVSS_Score_value,65, ,352,
+10213,SQLI,Audit impact security,SQL injection,Audit,Unspecified,CVSS_Score_value,21,"Perform one of the following to guard against SQL string injection attacks with JDBC.
+* Refactor the JDBC code to use the ""PreparedStatement"" API instead of ""Statement"".
+* Add a positional parameter to the SQL statement using ""?"".
+* Bind the tainted value to the parameter using the ""setString"" method: ""PreparedStatement.setString(1, """"username"""")"".
+",89,A1
+10214,LOG_INJECTION,Audit impact security,Log injection,Audit,Moderate,CVSS_Score_value,88,Log injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,117,
+10215,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,CVSS_Score_value,170, ,404,
+10614,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,202,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+10755,INSECURE_RANDOM,Low impact security,Cryptographically weak PRNG,Low,Unspecified,CVSS_Score_value,1476,"Use a cryptographically secure PRNG implementation such as ""crypto.RandomBytes()"" to generate random values for security-sensitive contexts.",330,
+11010,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,326,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11172,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,2021,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+11614,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,202,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11697,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,2021,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11928,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,326,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+11959,XSS,High impact security,Cross-site scripting,High,Minor,CVSS_Score_value,114,"Perform the following escaping in the following order to guard against cross-site scripting attacks with EL.
+
+For example: ""fn:escapeXml(account.name)""
+
+
+* Use the EL function ""fn:escapeXml"". This escapes the output for HTML.
+
+",79,
+11960,XSS,High impact security,Cross-site scripting,High,Unspecified,CVSS_Score_value,107,"Perform the following escaping in the following order to guard against cross-site scripting attacks with EL.
+
+For example: ""fn:escapeXml(transferbean.description)""
+
+
+* Use the EL function ""fn:escapeXml"". This escapes the output for HTML.
+
+",79,
+11961,XSS,High impact security,Cross-site scripting,High,Unspecified,CVSS_Score_value,112,"Perform the following escaping in the following order to guard against cross-site scripting attacks with EL.
+
+For example: ""fn:escapeXml(account.username)""
+
+
+* Use the EL function ""fn:escapeXml"". This escapes the output for HTML.
+
+",79,
+11962,XSS,High impact security,Cross-site scripting,High,Unspecified,CVSS_Score_value,116,"Perform the following escaping in the following order to guard against cross-site scripting attacks with EL.
+
+For example: ""fn:escapeXml(account.surname)""
+
+
+* Use the EL function ""fn:escapeXml"". This escapes the output for HTML.
+
+",79,
+11963,CONSTANT_EXPRESSION_RESULT,Incorrect expression,Misuse of typeof,Medium,Unspecified,CVSS_Score_value,620,"Did you intend to compare to """"string""""?",569,
+11964,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,687,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11965,NULL_RETURNS,Null pointer dereferences,Dereference null return value,Medium,Unspecified,CVSS_Score_value,34, ,476,
+11966,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,5853,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+11967,MISSING_BREAK,Control flow issues,Missing break in switch,Medium,Unspecified,CVSS_Score_value,1198, ,484,
+11968,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,190,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+11969,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,478,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+11970,LOCALSTORAGE_MANIPULATION,Audit impact security,localStorage manipulation,Audit,Unspecified,CVSS_Score_value,219, ,99,
+11971,DOM_XSS,High impact security,DOM-based cross-site scripting,High,Unspecified,CVSS_Score_value,90,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11972,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,87,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11973,INSECURE_RANDOM,Low impact security,Cryptographically weak PRNG,Low,Unspecified,CVSS_Score_value,46,"Use a cryptographically secure PRNG implementation such as ""crypto.RandomBytes()"" to generate random values for security-sensitive contexts.",330,
+11974,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,833,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11975,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,890,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11976,FORWARD_NULL,Null pointer dereferences,Bad use of null-like value,Medium,Unspecified,CVSS_Score_value,471, ,476,
+11977,FORWARD_NULL,Null pointer dereferences,Bad use of null-like value,Medium,Unspecified,CVSS_Score_value,577, ,476,
+11978,CONSTANT_EXPRESSION_RESULT,Incorrect expression,Misuse of typeof,Medium,Unspecified,CVSS_Score_value,517, ,569,
+11979,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,82,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11980,LOCALSTORAGE_WRITE,Audit impact security,localStorage write,Audit,Unspecified,CVSS_Score_value,428,"Audit the data entering""localStorage"" to make sure it isn't sensitive.  Store sensitive data on the server and manage with sessions.",922,
+11981,URL_MANIPULATION,Audit impact security,URL manipulation,Audit,Unspecified,CVSS_Score_value,422, ,99,
+11982,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,836,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+11983,NULL_RETURNS,Null pointer dereferences,Bad use of null-like value,Medium,Unspecified,CVSS_Score_value,737, ,476,
+11984,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,653,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11985,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,17,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+11986,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,833,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+11987,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,63,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+11988,NO_EFFECT,Incorrect expression,Expression with no effect,Medium,Unspecified,CVSS_Score_value,290,Perhaps this code is incomplete or mistyped in some way.,398,
+11989,DEADCODE,Control flow issues,Logically dead code,Medium,Unspecified,CVSS_Score_value,692, ,561,
+11990,NO_EFFECT,Incorrect expression,Expression with no effect,Medium,Unspecified,CVSS_Score_value,66,Perhaps this code is incomplete or mistyped in some way.,398,
+11991,NULL_RETURNS,Null pointer dereferences,Bad use of null-like value,Medium,Unspecified,CVSS_Score_value,1647, ,476,
+11992,LOCALSTORAGE_WRITE,Audit impact security,localStorage write,Audit,Unspecified,CVSS_Score_value,674,"Audit the data entering""localStorage"" to make sure it isn't sensitive.  Store sensitive data on the server and manage with sessions.",922,
+11993,COPY_PASTE_ERROR,Incorrect expression,Copy-paste error,Medium,Unspecified,CVSS_Score_value,1654,"Should it say ""src"" instead?",398,
+11994,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,900,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11995,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,110,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+11996,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,950,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+11997,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,82,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+11998,CONSTANT_EXPRESSION_RESULT,Incorrect expression,Misuse of typeof,Medium,Unspecified,CVSS_Score_value,517, ,569,
+11999,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,436,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+12000,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,2236, ,79,
+12001,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,778,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+12002,CONSTANT_EXPRESSION_RESULT,Incorrect expression,Misuse of typeof,Medium,Unspecified,CVSS_Score_value,952, ,569,
+12003,LOCALSTORAGE_WRITE,Audit impact security,localStorage write,Audit,Unspecified,CVSS_Score_value,109,"Audit the data entering""localStorage"" to make sure it isn't sensitive.  Store sensitive data on the server and manage with sessions.",922,
+12004,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,148,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+12005,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,566,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+12006,DEADCODE,Control flow issues,Logically dead code,Medium,Unspecified,CVSS_Score_value,2786, ,561,
+12007,LOCALSTORAGE_WRITE,Audit impact security,localStorage write,Audit,Unspecified,CVSS_Score_value,128,"Audit the data entering""localStorage"" to make sure it isn't sensitive.  Store sensitive data on the server and manage with sessions.",922,
+12008,DEADCODE,Control flow issues,Logically dead code,Medium,Unspecified,CVSS_Score_value,465, ,561,
+12009,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,103,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+12010,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,890,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+12011,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,566,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+12012,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,190,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+12013,UNREACHABLE,Control flow issues,Structurally dead code,Medium,Unspecified,CVSS_Score_value,1104, ,561,
+12014,INSECURE_RANDOM,Low impact security,Cryptographically weak PRNG,Low,Unspecified,CVSS_Score_value,192,"Use a cryptographically secure PRNG implementation such as ""crypto.RandomBytes()"" to generate random values for security-sensitive contexts.",330,
+12015,NULL_RETURNS,Null pointer dereferences,Bad use of null-like value,Medium,Unspecified,CVSS_Score_value,1015, ,476,
+12016,DOM_XSS,High impact security,DOM-based cross-site scripting,High,Unspecified,CVSS_Score_value,86,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+12017,DEADCODE,Control flow issues,Logically dead code,Medium,Unspecified,CVSS_Score_value,692, ,561,
+12018,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,684,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+12019,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,1694,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+12020,URL_MANIPULATION,Audit impact security,URL manipulation,Audit,Unspecified,CVSS_Score_value,332, ,99,
+12021,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,72,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+12022,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,157,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+12023,SCRIPT_CODE_INJECTION,Audit impact security,Script code injection,Audit,Unspecified,CVSS_Score_value,694,User-controllable dynamic data should not be used as part of scripts that are executed on the server.,95,
+12024,INSECURE_RANDOM,Low impact security,Cryptographically weak PRNG,Low,Unspecified,CVSS_Score_value,1074,"Use a cryptographically secure PRNG implementation such as ""crypto.RandomBytes()"" to generate random values for security-sensitive contexts.",330,
+12025,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,836,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+12026,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,1335,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+12027,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,66,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+12028,DOM_XSS,Audit impact security,DOM-based cross-site scripting,Audit,Unspecified,CVSS_Score_value,829,"The untrusted data reaches a sink that can either lead to HTML injection, JavaScript code execution, or the manipulation of a URL starting with the ""javascript:"" or ""data:"" schemes. Any of these can lead to a DOM XSS vulnerability.
+* HTML injection: Either escape properly the untrusted data or use a safe API to insert this data to the DOM; direct HTML manipulation as text should be avoided.
+* JavaScript code execution: Validate any untrusted data against a whitelist so it's not possible for an attacker to have its supplied code executing.
+* URL manipulation: Make sure the scheme is whitelisted and doesn't allow for the injection of a URL like: ""data:text/html;,<img/src/onerror=alert(1)>"".
+",79,
+12029,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,201,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,
+12030,COPY_PASTE_ERROR,Incorrect expression,Copy-paste error,Medium,Unspecified,CVSS_Score_value,726,"Should it say ""keyLower"" instead?",398,
+12031,DEADCODE,Control flow issues,Logically dead code,Medium,Unspecified,CVSS_Score_value,2498, ,561,
+12032,REGEX_INJECTION,Audit impact security,Regular expression injection,Audit,Unspecified,CVSS_Score_value,1037,Regular expression injection vulnerabilities can be addressed by validating that the user-controllable input conforms to expectations.,94,

@@ -2,7 +2,7 @@
 
 
 #usage: python list_defects.py -c <URL> -p <port> -u <username> -a <password> -s <stream>
-import logging 
+import logging
 import csv
 
 import sys
@@ -19,9 +19,9 @@ from optparse import OptionParser
 ##########
 class Services :
 	def __init__(self) :
-		self.host = "http://127.0.0.1"
+		self.host = "http://192.168.1.108"
 		self.port = "8080"
-	
+
 	def setHost(self, in_host) :
 		self.host = in_host
 
@@ -30,7 +30,7 @@ class Services :
 
 	def setPort(self, in_port) :
 		self.port = in_port
-	
+
 	def getPort(self) :
 		return self.port
 
@@ -42,7 +42,18 @@ class Services :
 		token = UsernameToken(in_user, in_pass)
 		security.tokens.append(token)
 		client.set_options(wsse=security)
-		
+
+##########
+# 2020 09 20
+# Leo Wang
+# CWE and OWasP
+##########
+CWE = {'77':'A1','78':'A1','88':'A1','89':'A1','90':'A1','91':'A1','564':'A1','917':'A1','22':'A2'}
+#OWASP=['A1','A1','A1','A1','A1','A1','A1','A1']
+#dict(zip(CWE,OWASP))
+
+print CWE['77']
+
 ##########
 # Configuration Service (WebServices)
 ##########
@@ -52,7 +63,7 @@ class ConfigurationService(Services) :
 		self.setHost(in_host)
 		self.setPort(in_port)
 		self.client = Client(self.getURL("configurationservice"))
-	
+
 	def setSecurity(self, in_user, in_pass) :
 		self.setServicesSecurity(self.client, in_user, in_pass)
 
@@ -74,22 +85,22 @@ class ConfigurationService(Services) :
 		ciddo = self.client.factory.create("componentIdDataObj")
 		ciddo.name = component_name
 		return self.client.service.getComponent(ciddo)
-	
+
 	def gettriageStoreId(self, target_stream) :
-        
+
 		filterSpec = self.client.factory.create("streamFilterSpecDataObj")
 		filterSpec.namePattern  = target_stream
 		streamDataObj = self.client.service.getStreams(filterSpec)
 		for stream in streamDataObj :
-			return stream.triageStoreId     
+			return stream.triageStoreId
 
 	def doNotify(self, subscribers) :
 		subject = "Notification of Receipt of Defects"
 		message  = "<p>Your junk is broken</p><p>It is still broken</p>"
 		message += "<a href=\"http://www.wunderground.com\">Wunderground</a>"
 		self.client.service.notify(subscribers, subject, message)
-		
-	
+
+
 
 ##########
 # Defect Service (WebServices)
@@ -100,7 +111,7 @@ class DefectService(Services) :
 		self.setHost(in_host)
 		self.setPort(in_port)
 		self.client = Client(self.getURL("defectservice"))
-	
+
 	def setSecurity(self, in_user, in_pass) :
 		self.setServicesSecurity(self.client, in_user, in_pass)
 
@@ -109,8 +120,8 @@ class DefectService(Services) :
 
 	# This method obtains CIDs that exist in a stream
 	# with a given set of one or more "Classification(s)"
-	# AND found by a given set of one or more "Checker(s)" 
-	
+	# AND found by a given set of one or more "Checker(s)"
+
 
 	def getMergedDefectsForStreams(self, stream_name, pageSpec) :
 		# create a stream identifier
@@ -119,12 +130,12 @@ class DefectService(Services) :
 
 		# create a filter to access the data we need for each of the CIDs
 		filterSpec = self.client.factory.create("mergedDefectFilterSpecDataObj")
-		
+
 		snapshotScope = self.client.factory.create("snapshotScopeSpecDataObj")
 		snapshotScope.showSelector = 'last()'
-		
+
 		return_cids = self.client.service.getMergedDefectsForStreams(sido, filterSpec, pageSpec, snapshotScope)
-			
+
 		return return_cids
 
 	def getStreamDefectList(self, cid, stream_name) :
@@ -136,7 +147,7 @@ class DefectService(Services) :
 		sido = self.client.factory.create("streamIdDataObj")
 		sido.name = stream_name
 		sdfsdo.streamIdList.append(sido)
-		
+
 		mergedDefectIdDataObj = self.client.factory.create("mergedDefectIdDataObj")
 		mergedDefectIdDataObj.cid = cid.cid
 		mergedDefectIdDataObj.mergeKey = cid.mergeKey
@@ -150,7 +161,7 @@ class DefectService(Services) :
 
 	def newDefectStateSpecDataObj(self) :
 		return self.client.factory.create("defectStateSpecDataObj")
-	
+
 	def getTriage(self, cid, mergeKey, triageStoreId) :
 		mergedDefectIdData = self.client.factory.create("mergedDefectIdDataObj")
 		mergedDefectIdData.cid = cid
@@ -167,10 +178,14 @@ def main() :
 	port = options.port
 	hostname = options.hostname
 	username = options.username
-	password = options.password 
-	
-	
-	# Begin by getting the configuration service 
+	password = options.password
+
+	print hostname
+	print username
+	print password
+
+
+	# Begin by getting the configuration service
 	cs = ConfigurationService("http://" + hostname, port)
 	cs.setSecurity(username, password)
 
@@ -189,22 +204,24 @@ def main() :
 	# get CIDs from all snapshots in this stream
 	#cids = ds.getSnapshotCIDs(target_stream)
 
-	# get merged defects for the gathered CIDs 
-	
+	# get merged defects for the gathered CIDs
+
 	#triageStoreId  = cs.gettriageStoreId(target_stream)
-	
-	with open("result_test.csv","wb") as csvfile: 
+#	global CVSS_Score_value
+
+	with open("result_test.csv","wb") as csvfile:
 		writer = csv.writer(csvfile)
-		row = (["CID", "Checker", "Category", "Type", "Impact", "Severity", "CVSS score","Vulnerable line number","Defect remediation guidance", "CWE"])
+		row = (["CID", "Checker", "Category", "Type", "Impact", "Severity", "CVSS score","Vulnerable line number","Defect remediation guidance", "CWE","OWASP"])
 		writer.writerow(row)
-	
+
 		pageSpec = ds.client.factory.create("pageSpecDataObj")
 		pageSpec.pageSize = 1000
 		pageSpec.sortAscending = True
 		pageSpec.startIndex = 0
-	
+
+
 		while True :
-				
+
 			cid_list = ds.getMergedDefectsForStreams(target_stream, pageSpec)
 
 			for cid in cid_list.mergedDefects :
@@ -225,11 +242,12 @@ def main() :
 						if defectStateAttribute.attributeValueId :
 							print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
 						else:
-							print str(defectStateAttribute.attributeDefinitionId.name)+": Don't have the attributeValueID by Victor"
+							print str(defectStateAttribute.attributeDefinitionId.name)+": Don't have the attributeValueID"
+
 				row.append(Severity_value)
 				row.append(CVSS_Score_value)
-				
-				
+
+
 				defects = ds.getStreamDefectList(cid, target_stream)
 				for defect in defects :
 					#print defect
@@ -248,7 +266,13 @@ def main() :
 				print " "
 				if hasattr(cid, "cwe") :
 					row.append(cid.cwe)
+					print  cid.cwe
+					if str(cid.cwe) in CWE:
+						row.append(CWE[str(cid.cwe)])
+					else:
+						row.append("")
 				else :
+					row.append("")
 					row.append("")
 				writer.writerow(row)
 			pageSpec.startIndex = pageSpec.startIndex + 1000
@@ -261,21 +285,21 @@ def main() :
 # the appropriate entry function
 ##########
 parser = OptionParser()
-parser.add_option("-c", "--host", dest="hostname", 
+parser.add_option("-c", "--host", dest="hostname",
 				  help="Set hostname or IP address of CIM",
-				  default="127.0.0.1")
+				  default="192.168.1.108")
 parser.add_option("-p", "--port", dest="port",
 				  help="Set port number to use",
 				  default="8080")
 parser.add_option("-u", "--username", dest="username",
 				  help="Set username for access",
-				  default="")
+				  default="admin")
 parser.add_option("-a", "--password", dest="password",
 				  help="Set password for access",
-				  default="")
+				  default="fish123")
 parser.add_option("-s", "--stream", dest="stream",
 				  help="Set target stream for access",
-				  default="")
+				  default="InsecureBank")
 (options, args) = parser.parse_args()
 if __name__ == "__main__" :
 	main()
