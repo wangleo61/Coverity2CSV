@@ -1,0 +1,65 @@
+CID,Checker,Category,Type,Impact,Severity,CVSS score,Vulnerable line number,Defect remediation guidance,CWE
+51361,ASSIGN_NOT_RETURNING_STAR_THIS,Strict rule violations,Assign does not return *this,Low,Unspecified,0.0,95, ,710
+51491,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,58, ,
+51493,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,92, ,
+51497,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,72, ,
+51498,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,106, ,
+51504,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,458, ,
+51505,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,64, ,
+53735,SELF_ASSIGN,Rule violations,Unsafe assignment operator,Low,Unspecified,0.0,170, ,710
+104843,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,1192, ,457
+104844,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,98, ,457
+104845,UNCAUGHT_EXCEPT,Error handling issues,Uncaught exception,Medium,Unspecified,5.0,246, ,248
+104846,TOCTOU,Security best practices violations,Time of check time of use,Low,Unspecified,5.0,140, ,367
+104847,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,1185, ,457
+104849,FORWARD_NULL,Null pointer dereferences,Dereference after null check,Medium,Unspecified,7.39,456, ,476
+104850,CONSTANT_EXPRESSION_RESULT,Integer handling issues,Operands don't affect result,Medium,Unspecified,7.39,525, ,569
+104851,UNINIT_CTOR,Uninitialized members,Uninitialized pointer field,Medium,Unspecified,6.3,2242, ,457
+104852,DC.WEAK_CRYPTO,Security best practices violations,Calling risky function,Low,Unspecified,6.3,426,"Use a compliant random number generator, such as ""/dev/random"" or ""/dev/urandom"" on Unix-like systems, and CNG (Cryptography API: Next Generation) on Windows.",676
+104854,UNINIT_CTOR,Uninitialized members,Uninitialized pointer field,Medium,Unspecified,6.3,2002, ,457
+104855,TOCTOU,Security best practices violations,Time of check time of use,Low,Unspecified,4.91,392, ,367
+104856,DC.WEAK_CRYPTO,Security best practices violations,Calling risky function,Low,Unspecified,4.91,78,"Use a compliant random number generator, such as ""/dev/random"" or ""/dev/urandom"" on Unix-like systems, and CNG (Cryptography API: Next Generation) on Windows.",676
+104858,UNINIT_CTOR,Uninitialized members,Uninitialized scalar field,Medium,Unspecified,6.3,505, ,457
+104859,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,120, ,457
+104861,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,136, ,457
+104862,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,748, ,457
+104863,DC.WEAK_CRYPTO,Security best practices violations,Calling risky function,Low,Unspecified,6.3,23,"Use a compliant random number generator, such as ""/dev/random"" or ""/dev/urandom"" on Unix-like systems, and CNG (Cryptography API: Next Generation) on Windows.",676
+104865,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,1178, ,457
+104867,MISSING_LOCK,Concurrent data access violations,Data race condition,Medium,Unspecified,4.91,542, ,366
+104868,UNINIT_CTOR,Uninitialized members,Uninitialized scalar field,Medium,Unspecified,6.3,560, ,457
+104869,UNINIT_CTOR,Uninitialized members,Uninitialized pointer field,Medium,Unspecified,6.3,2242, ,457
+104870,NO_EFFECT,Control flow issues,Unsigned compared against 0,Medium,Unspecified,0.0,398, ,570
+104871,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,110, ,457
+104872,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,128, ,457
+104873,DC.WEAK_CRYPTO,Security best practices violations,Calling risky function,Low,Unspecified,6.3,172,"Use a compliant random number generator, such as ""/dev/random"" or ""/dev/urandom"" on Unix-like systems, and CNG (Cryptography API: Next Generation) on Windows.",676
+110590,PW.PARAMETER_HIDDEN,Parse warnings,Parse warning,Low,Unspecified,0.0,470, ,398
+110591,PW.PARAMETER_HIDDEN,Parse warnings,Parse warning,Low,Unspecified,0.0,58, ,398
+155489,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,46, ,
+156899,MISSING_ASSIGN,Rule violations,Missing assignment operator,Low,Unspecified,0.0,46, ,710
+158984,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,98, ,
+158985,MISSING_ASSIGN,Rule violations,Missing assignment operator,Low,Unspecified,0.0,527, ,710
+158986,SELF_ASSIGN,Rule violations,Unsafe assignment operator,Low,Unspecified,0.0,679, ,710
+158987,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,767, ,
+158988,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,1055, ,
+158989,MISSING_ASSIGN,Rule violations,Missing assignment operator,Low,Unspecified,0.0,60, ,710
+158990,MISSING_COPY,Rule violations,Missing copy constructor,Low,Unspecified,0.0,35, ,710
+158991,MISSING_COPY,Rule violations,Missing copy constructor,Low,Unspecified,0.0,527, ,710
+158992,MISSING_COPY,Rule violations,Missing copy constructor,Low,Unspecified,0.0,60, ,710
+158993,COPY_WITHOUT_ASSIGN,Rule violations,Copy without assign,Low,Unspecified,0.0,49, ,
+158994,ASSIGN_NOT_RETURNING_STAR_THIS,Strict rule violations,Assign does not return *this,Low,Unspecified,0.0,551, ,710
+158995,MISSING_ASSIGN,Rule violations,Missing assignment operator,Low,Unspecified,0.0,35, ,710
+159257,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,83, ,457
+159258,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,185, ,457
+159259,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,139, ,457
+159260,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,55, ,457
+159261,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,213, ,457
+159262,UNINIT,Uninitialized variables,Uninitialized scalar variable,High,Unspecified,6.3,111, ,457
+159482,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,24, ,404
+159483,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,33, ,404
+159484,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,139, ,404
+159485,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Major,6.3,33, ,404
+159486,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,276, ,404
+159487,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,139, ,404
+159488,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,287, ,404
+159489,RESOURCE_LEAK,Exceptional resource leaks,Resource leak on an exceptional path,Low,Unspecified,6.3,26, ,404
+159693,UNCAUGHT_EXCEPT,Error handling issues,Uncaught exception,Medium,Unspecified,6.3,557, ,248
