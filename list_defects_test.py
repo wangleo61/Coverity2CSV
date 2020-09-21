@@ -4,6 +4,7 @@
 #usage: python list_defects.py -c <URL> -p <port> -u <username> -a <password> -s <stream>
 import logging 
 import csv
+import json
 
 import sys
 reload(sys)
@@ -48,7 +49,7 @@ class Services :
 # Leo Wang
 # CWE and OWasP
 ##########
-CWE = {'77':'A1','78':'A1','88':'A1','89':'A1','90':'A1','91':'A1','564':'A1','917':'A1','22':'A2'}
+CWE = {}
 #OWASP=['A1','A1','A1','A1','A1','A1','A1','A1']
 #dict(zip(CWE,OWASP))
 
@@ -201,12 +202,17 @@ def main() :
 	# get merged defects for the gathered CIDs 
 	
 	#triageStoreId  = cs.gettriageStoreId(target_stream)
+
+
+	with open("Cwe_Owasp_Map.json",'r') as load_f:
+		CWE = json.load(load_f)
 	
 	with open("result_test.csv","wb") as csvfile: 
 		writer = csv.writer(csvfile)
-		row = (["CID", "Checker", "Category", "Type", "Impact", "Severity", "CVSS score","Vulnerable line number","Defect remediation guidance", "CWE"])
+		row = (["CID", "Checker", "Category", "Type", "Impact", "Severity", "CVSS score","Vulnerable line number","Defect remediation guidance", "CWE","OWASP"])
 		writer.writerow(row)
 	
+		pageSpec = ds.client.factory.create("pageSpecDataObj")
 		pageSpec = ds.client.factory.create("pageSpecDataObj")
 		pageSpec.pageSize = 1000
 		pageSpec.sortAscending = True
@@ -240,7 +246,7 @@ def main() :
 						if defectStateAttribute.attributeValueId :
 							print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
 						else:
-							print str(defectStateAttribute.attributeDefinitionId.name)+": Don't have the attributeValueID by Victor"
+							print str(defectStateAttribute.attributeDefinitionId.name)+": Don't have the attributeValueID"
 				row.append(Severity_value)
 				row.append(CVSS_Score_value)
 				
@@ -249,22 +255,20 @@ def main() :
 				for defect in defects :
 					#print defect
 					for defectInstance in defect.defectInstances :
-						print "CID:",defect.cid
 						for event in defectInstance.events :
 							if (event.main) :
 								Line_number = str(event.lineNumber)
-								print "LINE:", event.lineNumber
 							if event.eventKind == 'REMEDIATION':
 								Remediation = str(event.eventDescription)
 				row.append(Line_number)
 				row.append(Remediation)
-				print " "
 				if hasattr(cid, "cwe") :
 					cwe_value = str(cid.cwe)
 					if cwe_value in CWE:
 						OWasP_value = CWE[cwe_value]
 				row.append(cwe_value)
 				row.append(OWasP_value)
+				print " "
 				writer.writerow(row)
 			pageSpec.startIndex = pageSpec.startIndex + 1000
 			if len(cid_list.mergedDefectIds) < 1000 :
