@@ -306,19 +306,19 @@ def main() :
 parser = OptionParser()
 parser.add_option("-c", "--host", dest="hostname", 
                   help="Set hostname or IP address of CIM",
-				  default="127.0.0.1")
+				  default="192.168.1.108")
 parser.add_option("-p", "--port", dest="port",
 				  help="Set port number to use",
 				  default="8080")
 parser.add_option("-u", "--username", dest="username",
 				  help="Set username for access",
-				  default="")
+				  default="admin")
 parser.add_option("-a", "--password", dest="password",
 				  help="Set password for access",
-				  default="")
+				  default="fish123")
 parser.add_option("-s", "--stream", dest="stream",
 				  help="Set target stream for access",
-				  default="")
+				  default="InsecureCode")
 (options, args) = parser.parse_args()
 if __name__ == "__main__" :
 	main()
