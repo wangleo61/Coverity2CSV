@@ -294,11 +294,8 @@ parser.add_option("-a", "--password", dest="password",
 				  default="fish123")
 parser.add_option("-s", "--stream", dest="stream",
 				  help="Set target stream for access",
-<<<<<<< HEAD
-				  default="InsecureCode")
-=======
 				  default="InsecureBank")
->>>>>>> f7fd1958e417803dbba89d4955c2136ffbec75a5
+
 (options, args) = parser.parse_args()
 if __name__ == "__main__" :
 	main()
