@@ -177,8 +177,7 @@ def main() :
 	port = options.port
 	hostname = options.hostname
 	username = options.username
-	password = options.password
-	filename = options.filename
+	password = options.password 
 	
 	
 	# Begin by getting the configuration service 
@@ -208,7 +207,7 @@ def main() :
 	with open("Cwe_Owasp_Map.json",'r') as load_f:
 		CWE = json.load(load_f)
 	
-	with open(filename,"wb") as csvfile:
+	with open("OWASP+Top+10+Outstanding+Issues.csv","wb") as csvfile:
 		writer = csv.writer(csvfile)
 		row = (["CID", "Checker", "Category", "Type", "Impact", "Severity", "CVSS score","Vulnerable line number","Defect remediation guidance", "CWE","OWASP"])
 		writer.writerow(row)
@@ -296,9 +295,6 @@ parser.add_option("-a", "--password", dest="password",
 parser.add_option("-s", "--stream", dest="stream",
 				  help="Set target stream for access",
 				  default="InsecureBank")
-parser.add_option("-f", "--filename", dest="filename",
-				  help="Set filename export",
-				  default="OWASP_Top_10_Outstanding_Issuess.csv")
 
 (options, args) = parser.parse_args()
 if __name__ == "__main__" :

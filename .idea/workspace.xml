@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d24fe1-0122-494f-88e4-910d5c49f534" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/list_defects.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_defects.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///Work/1.Customer/20191218 Jocky Club/SAST/Cov2JIRA/getDefect_v1.7d.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8355">
-              <caret line="561" column="22" selection-start-line="561" selection-start-column="22" selection-end-line="561" selection-end-column="22" />
+            <state relative-caret-position="252">
+              <caret line="570" column="20" selection-start-line="570" selection-start-column="20" selection-end-line="570" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Python/2.7/lib/python/site-packages/jira/client.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13">
+              <caret line="742" column="34" selection-start-line="742" selection-start-column="34" selection-end-line="742" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -24,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/list_defects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="209" column="50" selection-start-line="209" selection-start-column="50" selection-end-line="209" selection-end-column="50" />
+            <state relative-caret-position="279">
+              <caret line="300" column="59" selection-start-line="300" selection-start-column="59" selection-end-line="300" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -40,6 +50,7 @@
       <find>test</find>
       <find>new</find>
       <find>DefectStatus</find>
+      <find>host</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,12 +177,12 @@
     <frame x="0" y="23" width="1440" height="824" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37279776" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1663143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40846995" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2704918" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989071" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -227,24 +238,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Python/2.7/lib/python/site-packages/jira/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31155">
-          <caret line="2080" column="26" lean-forward="true" selection-start-line="2080" selection-start-column="26" selection-end-line="2080" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17010">
           <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Work/1.Customer/20191218 Jocky Club/SAST/Cov2JIRA/getDefect_v1.7d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8355">
-          <caret line="561" column="22" selection-start-line="561" selection-start-column="22" selection-end-line="561" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -257,10 +254,24 @@
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$USER_HOME$/Library/Python/2.7/lib/python/site-packages/jira/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="742" column="34" selection-start-line="742" selection-start-column="34" selection-end-line="742" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Work/1.Customer/20191218 Jocky Club/SAST/Cov2JIRA/getDefect_v1.7d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="570" column="20" selection-start-line="570" selection-start-column="20" selection-end-line="570" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/list_defects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="209" column="50" selection-start-line="209" selection-start-column="50" selection-end-line="209" selection-end-column="50" />
+        <state relative-caret-position="279">
+          <caret line="300" column="59" selection-start-line="300" selection-start-column="59" selection-end-line="300" selection-end-column="59" />
         </state>
       </provider>
     </entry>
