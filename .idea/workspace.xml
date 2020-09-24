@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d24fe1-0122-494f-88e4-910d5c49f534" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/result_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result_test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_defects.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_defects.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/list_defects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="53" selection-start-line="53" selection-end-line="53" selection-end-column="21" />
+            <state relative-caret-position="73">
+              <caret line="209" column="50" selection-start-line="209" selection-start-column="50" selection-end-line="209" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -259,8 +259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/list_defects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="53" selection-start-line="53" selection-end-line="53" selection-end-column="21" />
+        <state relative-caret-position="73">
+          <caret line="209" column="50" selection-start-line="209" selection-start-column="50" selection-end-line="209" selection-end-column="50" />
         </state>
       </provider>
     </entry>

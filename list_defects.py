@@ -207,7 +207,7 @@ def main() :
 	with open("Cwe_Owasp_Map.json",'r') as load_f:
 		CWE = json.load(load_f)
 	
-	with open("result_test.csv","wb") as csvfile: 
+	with open("OWASP+Top+10+Outstanding+Issues.csv","wb") as csvfile:
 		writer = csv.writer(csvfile)
 		row = (["CID", "Checker", "Category", "Type", "Impact", "Severity", "CVSS score","Vulnerable line number","Defect remediation guidance", "CWE","OWASP"])
 		writer.writerow(row)
