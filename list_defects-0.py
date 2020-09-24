@@ -4,7 +4,6 @@
 #usage: python list_defects.py -c <URL> -p <port> -u <username> -a <password> -s <stream>
 import logging 
 import csv
-import json
 
 import sys
 reload(sys)
@@ -45,15 +44,6 @@ class Services :
 		client.set_options(wsse=security)
 		
 ##########
-# 2020 09 20
-# Leo Wang
-# CWE and OWasP
-##########
-CWE = {}
-#OWASP=['A1','A1','A1','A1','A1','A1','A1','A1']
-#dict(zip(CWE,OWASP))
-
-##########
 # Configuration Service (WebServices)
 ##########
 class ConfigurationService(Services) :
@@ -86,7 +76,7 @@ class ConfigurationService(Services) :
 		return self.client.service.getComponent(ciddo)
 	
 	def gettriageStoreId(self, target_stream) :
-
+        
 		filterSpec = self.client.factory.create("streamFilterSpecDataObj")
 		filterSpec.namePattern  = target_stream
 		streamDataObj = self.client.service.getStreams(filterSpec)
@@ -202,17 +192,12 @@ def main() :
 	# get merged defects for the gathered CIDs 
 	
 	#triageStoreId  = cs.gettriageStoreId(target_stream)
-
-
-	with open("Cwe_Owasp_Map.json",'r') as load_f:
-		CWE = json.load(load_f)
 	
-	with open("result_test.csv","wb") as csvfile: 
+	with open("result.csv","wb") as csvfile: 
 		writer = csv.writer(csvfile)
-		row = (["CID", "Checker", "Category", "Type", "Impact", "Severity", "CVSS score","Vulnerable line number","Defect remediation guidance", "CWE","OWASP"])
+		row = (["CID", "Checker", "Category", "Type", "Impact", "DefectStatus", "Classification", "Action", "Severity", "Fix Target", "Legacy", "Owner", "Comment", "Ext. Reference", "Instances", "CWE"])
 		writer.writerow(row)
 	
-		pageSpec = ds.client.factory.create("pageSpecDataObj")
 		pageSpec = ds.client.factory.create("pageSpecDataObj")
 		pageSpec.pageSize = 1000
 		pageSpec.sortAscending = True
@@ -222,12 +207,6 @@ def main() :
 				
 			cid_list = ds.getMergedDefectsForStreams(target_stream, pageSpec)
 
-			Severity_value = ""
-			CVSS_Score_value = ""
-			Line_number = ""
-			Remediation = ""
-			cwe_value = ""
-			OWasP_value = ""
 			for cid in cid_list.mergedDefects :
 				row = []
 				row.append(cid.cid)
@@ -236,39 +215,84 @@ def main() :
 				row.append(cid.displayType)
 				row.append(cid.displayImpact)
 				for defectStateAttribute in cid.defectStateAttributeValues:
-					if defectStateAttribute.attributeDefinitionId.name == 'Severity':
+					if defectStateAttribute.attributeDefinitionId.name == 'DefectStatus':
+						print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
+						DefectStatus_value = str(defectStateAttribute.attributeValueId.name)
+						#row.append(str(defectStateAttribute.attributeValueId.name))
+					elif defectStateAttribute.attributeDefinitionId.name == 'Classification':
+						print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
+						Classification_value = str(defectStateAttribute.attributeValueId.name)
+					elif defectStateAttribute.attributeDefinitionId.name == 'Action':
+						print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
+						Action_value = str(defectStateAttribute.attributeValueId.name)
+					elif defectStateAttribute.attributeDefinitionId.name == 'Severity':
 						print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
 						Severity_value = str(defectStateAttribute.attributeValueId.name)
-					elif defectStateAttribute.attributeDefinitionId.name == 'CVSS_Score':
+					elif defectStateAttribute.attributeDefinitionId.name == 'Fix Target':
 						print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
-						CVSS_Score_value = str(defectStateAttribute.attributeValueId.name)
-					else:
-						if defectStateAttribute.attributeValueId :
+						Fix_Target_value = str(defectStateAttribute.attributeValueId.name)
+					elif defectStateAttribute.attributeDefinitionId.name == 'Legacy':
+						print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
+						Legacy_value = str(defectStateAttribute.attributeValueId.name)
+					elif defectStateAttribute.attributeDefinitionId.name == 'Owner':
+						print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
+						Owner_value = str(defectStateAttribute.attributeValueId.name)
+					elif defectStateAttribute.attributeDefinitionId.name == 'Ext. Reference':
+						print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
+						Ext_Reference_value = str(defectStateAttribute.attributeValueId.name)
+					elif defectStateAttribute.attributeDefinitionId.name == 'Comment':
+						if hasattr(defectStateAttribute.attributeValueId, "name"):
 							print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
+							Comment_value = str(defectStateAttribute.attributeValueId.name)
 						else:
-							print str(defectStateAttribute.attributeDefinitionId.name)+": Don't have the attributeValueID"
+							Comment_value = ""
+				row.append(DefectStatus_value)
+				row.append(Classification_value)
+				row.append(Action_value)
 				row.append(Severity_value)
-				row.append(CVSS_Score_value)
+				row.append(Fix_Target_value)
+				row.append(Legacy_value)
+				row.append(Owner_value)
+				row.append(Comment_value)
+				row.append(Ext_Reference_value)
+				
 				
 				
 				defects = ds.getStreamDefectList(cid, target_stream)
 				for defect in defects :
 					#print defect
+					temp = " "
 					for defectInstance in defect.defectInstances :
+						print "CID:",defect.cid
+						if hasattr(defectInstance.function, "functionDisplayName"):
+							functionDisplayName = defectInstance.function.functionDisplayName
+						else:
+							functionDisplayName = None 
+						#row.append("CID:"+str(defect.cid))
 						for event in defectInstance.events :
 							if (event.main) :
-								Line_number = str(event.lineNumber)
-							if event.eventKind == 'REMEDIATION':
-								Remediation = str(event.eventDescription)
-				row.append(Line_number)
-				row.append(Remediation)
+								print "LINE:", event.lineNumber
+								print "FILE:", event.fileId.filePathname 
+								print "MAIN_EVENT:", str(event.eventDescription)
+								print "LocalEffect:", str(defectInstance.localEffect)
+								print "FunctionDisplayName:", str(functionDisplayName)
+								print "LongDescription:", str(defectInstance.longDescription)
+								temp += "LINE:"+str(event.lineNumber)+' '+"FILE:"+event.fileId.filePathname+'\n'
+								temp += "MAIN_EVENT:"+event.eventDescription+"\n"
+								temp += "DESC:"+"\n"
+								if defectInstance.localEffect != None:
+									temp += str(defectInstance.localEffect)+"\n"
+								if functionDisplayName != None:
+									temp += "In "+str(functionDisplayName)+":"+"\n"
+								temp += str(defectInstance.longDescription)+"\n"
+								temp += "\n"
+								#row.append("LINE:"+str(event.lineNumber)+' '+"FILE:"+event.fileId.filePathname+' '+"DESC:"+event.eventDescription)						
+								print " "
+				row.append(temp)
 				if hasattr(cid, "cwe") :
-					cwe_value = str(cid.cwe)
-					if cwe_value in CWE:
-						OWasP_value = CWE[cwe_value]
-				row.append(cwe_value)
-				row.append(OWasP_value)
-				print " "
+					row.append(cid.cwe)
+				else :
+					row.append("")
 				writer.writerow(row)
 			pageSpec.startIndex = pageSpec.startIndex + 1000
 			if len(cid_list.mergedDefectIds) < 1000 :
@@ -281,20 +305,20 @@ def main() :
 ##########
 parser = OptionParser()
 parser.add_option("-c", "--host", dest="hostname", 
-				  help="Set hostname or IP address of CIM",
-				  default="192.168.1.108")
+                  help="Set hostname or IP address of CIM",
+				  default="127.0.0.1")
 parser.add_option("-p", "--port", dest="port",
 				  help="Set port number to use",
 				  default="8080")
 parser.add_option("-u", "--username", dest="username",
 				  help="Set username for access",
-				  default="admin")
+				  default="")
 parser.add_option("-a", "--password", dest="password",
 				  help="Set password for access",
-				  default="fish123")
+				  default="")
 parser.add_option("-s", "--stream", dest="stream",
 				  help="Set target stream for access",
-				  default="InsecureBank")
+				  default="")
 (options, args) = parser.parse_args()
 if __name__ == "__main__" :
 	main()

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="16d24fe1-0122-494f-88e4-910d5c49f534" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/list_defects.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_defects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_defects_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_defects-0.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/list_defects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="320" column="39" selection-start-line="320" selection-start-column="39" selection-end-line="320" selection-end-column="39" />
+            <state relative-caret-position="112">
+              <caret line="283" selection-start-line="283" selection-end-line="283" />
             </state>
           </provider>
         </entry>
@@ -200,27 +201,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/list_defects_test.py</url>
-          <line>240</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/list_defects_test.py</url>
-          <line>237</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/list_defects_test.py</url>
-          <line>234</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -267,10 +247,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/result_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4952" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/list_defects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="320" column="39" selection-start-line="320" selection-start-column="39" selection-end-line="320" selection-end-column="39" />
+        <state relative-caret-position="112">
+          <caret line="283" selection-start-line="283" selection-end-line="283" />
         </state>
       </provider>
     </entry>
