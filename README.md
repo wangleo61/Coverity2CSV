@@ -21,3 +21,7 @@ https://cwe.mitre.org/data/definitions/1026.html
 OWASP Top Introduction
 https://owasp.org/www-pdf-archive/OWASP_Top_10-2017_%28en%29.pdf.pdf
 
+#Add the resource file (CWE_ Owasp_ Map.json ）Read the mapping relationship between CWE and OWASP,
+
+In addition, the content of the mapping relationship websit http://cwe.mitre.org/data/definitions/1026.html
+
