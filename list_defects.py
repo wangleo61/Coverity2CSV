@@ -210,7 +210,7 @@ def main() :
 	
 	with open(filename,"wb") as csvfile:
 		writer = csv.writer(csvfile)
-		row = (["CID", "Checker", "Category", "Type", "Impact", "Severity", "CVSS score","Vulnerable line number","Defect remediation guidance", "CWE","OWASP"])
+		row = (["CID", "Checker", "Category", "Type", "Impact", "Severity", "CVSS score","Event Description","Vulnerable line number","Defect remediation guidance", "CWE","OWASP","FilePathname"])
 		writer.writerow(row)
 	
 		pageSpec = ds.client.factory.create("pageSpecDataObj")
@@ -229,6 +229,8 @@ def main() :
 			Remediation = ""
 			cwe_value = ""
 			OWasP_value = ""
+			file_Pathname = ""
+			event_Description =""
 			for cid in cid_list.mergedDefects :
 				row = []
 				row.append(cid.cid)
@@ -250,7 +252,7 @@ def main() :
 							print str(defectStateAttribute.attributeDefinitionId.name)+": Don't have the attributeValueID"
 				row.append(Severity_value)
 				row.append(CVSS_Score_value)
-				
+
 				
 				defects = ds.getStreamDefectList(cid, target_stream)
 				for defect in defects :
@@ -259,8 +261,10 @@ def main() :
 						for event in defectInstance.events :
 							if (event.main) :
 								Line_number = str(event.lineNumber)
+								event_Description =str(event.eventDescription)
 							if event.eventKind == 'REMEDIATION':
 								Remediation = str(event.eventDescription)
+				row.append(event_Description)
 				row.append(Line_number)
 				row.append(Remediation)
 				if hasattr(cid, "cwe") :
@@ -269,6 +273,7 @@ def main() :
 						OWasP_value = CWE[cwe_value]
 				row.append(cwe_value)
 				row.append(OWasP_value)
+				row.append(cid.filePathname)
 				print " "
 				writer.writerow(row)
 			pageSpec.startIndex = pageSpec.startIndex + 1000
@@ -283,7 +288,7 @@ def main() :
 parser = OptionParser()
 parser.add_option("-c", "--host", dest="hostname", 
 				  help="Set hostname or IP address of CIM",
-				  default="192.168.1.108")
+				  default="prd-sal-cov01.dc2.lan")
 parser.add_option("-p", "--port", dest="port",
 				  help="Set port number to use",
 				  default="8080")
@@ -292,10 +297,10 @@ parser.add_option("-u", "--username", dest="username",
 				  default="admin")
 parser.add_option("-a", "--password", dest="password",
 				  help="Set password for access",
-				  default="fish123")
+				  default="SIGpass8!")
 parser.add_option("-s", "--stream", dest="stream",
 				  help="Set target stream for access",
-				  default="InsecureBank")
+				  default="WebGoat8")
 parser.add_option("-f", "--filename", dest="filename",
 				  help="Set filename export",
 				  default="OWASP_Top_10_Outstanding_Issuess.csv")
