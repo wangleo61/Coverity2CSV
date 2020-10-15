@@ -6,7 +6,7 @@ Export the Coverity defect as CVS file
 1. Vulnerable line number
 2. Owasp top ten 2017 information(A1-A10)
 3. CVSS score
-4. Severity 
+4. CVSS Severity 
 5. Defect remediation guidance
 
 
