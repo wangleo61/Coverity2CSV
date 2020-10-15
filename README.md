@@ -32,6 +32,7 @@ CVSS_Score
 CVSS_Severity
 CVSS_Vector
 
+
 #Execute the command before export CVS, this will be generating the value for this fields
 "C:\Program Files\Coverity\Coverity Reports\bin\cov-generate-cvss-report.exe"    C:\Users\leo\Desktop\Leo\xxx.yaml --password console --profile C:\Program Files\Coverity\Coverity Reports\config\Master_CWE_CVSS_Base_Score_Profile_V1.json --score 
 
