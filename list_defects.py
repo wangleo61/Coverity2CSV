@@ -239,7 +239,7 @@ def main() :
 				row.append(cid.displayType)
 				row.append(cid.displayImpact)
 				for defectStateAttribute in cid.defectStateAttributeValues:
-					if defectStateAttribute.attributeDefinitionId.name == 'Severity':
+					if defectStateAttribute.attributeDefinitionId.name == 'CVSS_Severity':
 						print str(defectStateAttribute.attributeDefinitionId.name)+": "+str(defectStateAttribute.attributeValueId.name)
 						Severity_value = str(defectStateAttribute.attributeValueId.name)
 					elif defectStateAttribute.attributeDefinitionId.name == 'CVSS_Score':
@@ -285,10 +285,31 @@ def main() :
 # Should be at bottom of "Main Entry Point".  Points the script back up into
 # the appropriate entry function
 ##########
+#parser = OptionParser()
+#parser.add_option("-c", "--host", dest="hostname",
+#				  help="Set hostname or IP address of CIM",
+#				  default="prd-sal-cov01.dc2.lan")
+#parser.add_option("-p", "--port", dest="port",
+#				  help="Set port number to use",
+#				  default="8080")
+#parser.add_option("-u", "--username", dest="username",
+#				  help="Set username for access",
+#				  default="admin")
+#parser.add_option("-a", "--password", dest="password",
+#				  help="Set password for access",
+#				  default="SIGpass8!")
+#parser.add_option("-s", "--stream", dest="stream",
+#				  help="Set target stream for access",
+#				  default="WebGoat8")
+#parser.add_option("-f", "--filename", dest="filename",
+#				  help="Set filename export",
+#				  default="OWASP_Top_10_Outstanding_Issuess.csv")
+
+
 parser = OptionParser()
-parser.add_option("-c", "--host", dest="hostname", 
+parser.add_option("-c", "--host", dest="hostname",
 				  help="Set hostname or IP address of CIM",
-				  default="prd-sal-cov01.dc2.lan")
+				  default="192.168.1.108")
 parser.add_option("-p", "--port", dest="port",
 				  help="Set port number to use",
 				  default="8080")
@@ -297,10 +318,10 @@ parser.add_option("-u", "--username", dest="username",
 				  default="admin")
 parser.add_option("-a", "--password", dest="password",
 				  help="Set password for access",
-				  default="SIGpass8!")
+				  default="fish123")
 parser.add_option("-s", "--stream", dest="stream",
 				  help="Set target stream for access",
-				  default="WebGoat8")
+				  default="InsecureBank")
 parser.add_option("-f", "--filename", dest="filename",
 				  help="Set filename export",
 				  default="OWASP_Top_10_Outstanding_Issuess.csv")
